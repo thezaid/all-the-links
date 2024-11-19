@@ -73,7 +73,32 @@
     button:hover {
       background-color: #5a5a5a; /* Darker grey for hover effect */
     }
+            /* Circular button styles */
+        .circular-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 60px;
+            height: 60px;
+            background-color: #333; /* Dark grey color */
+            color: white;
+            border: none;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+            text-decoration: none;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Modern shadow effect */
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        /* Hover effect */
+        .circular-button:hover {
+            transform: scale(1.1);
+        }
   </style>
+  
   <script>
     function checkPassword(event) {
       event.preventDefault(); // Prevent form submission
@@ -91,6 +116,7 @@
       document.getElementById("password-form").addEventListener("submit", checkPassword);
     });
   </script>
+  
 </head>
 <body>
   <form id="password-form">
@@ -103,5 +129,11 @@
   <div id="content">
     <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTtrJSoEYaMNd0c7zTh3SYQOzHPRVe8tdZk5LYH9_fXHaw9S5WsyLPoA5ObzzZGR6Ol26aGpYkutdgh/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
   </div>
+  
+    <!-- Circular button with pencil icon -->
+    <a href="https://www.google.com" class="circular-button" target="_blank" rel="noopener noreferrer">
+        <i class="fas fa-pencil-alt"></i> <!-- Pencil icon -->
+    </a>
+  
 </body>
 </html>
